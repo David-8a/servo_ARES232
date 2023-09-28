@@ -37,9 +37,9 @@ hardware_interface::CallbackReturn ServoArduinoHardware::on_init(
 
 
   cfg_.joint1_name = info_.hardware_parameters["joint1_name"];
-  cfg_.joint2_name = info_.hardware_parameters["joint2_name"];
-  cfg_.joint3_name = info_.hardware_parameters["joint3_name"];
-  cfg_.joint4_name = info_.hardware_parameters["joint4_name"];
+  // cfg_.joint2_name = info_.hardware_parameters["joint2_name"];
+  // cfg_.joint3_name = info_.hardware_parameters["joint3_name"];
+  // cfg_.joint4_name = info_.hardware_parameters["joint4_name"];
   cfg_.loop_rate = std::stof(info_.hardware_parameters["loop_rate"]);
   cfg_.device = info_.hardware_parameters["device"];
   cfg_.baud_rate = std::stoi(info_.hardware_parameters["baud_rate"]);
