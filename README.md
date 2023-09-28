@@ -1,3 +1,8 @@
+# Debo hacer lo siguiente:
+1. Modificar el ros2_control del description con los joints nuevos del urdf
+2. Modificar el gazebo del description con los joints nuevos del urdf
+
+
 # Servo hardware for arduino
 
 Creado a partir del [tutorial de Articulated Robotics](https://youtu.be/J02jEKawE5U). 

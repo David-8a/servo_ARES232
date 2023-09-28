@@ -37,28 +37,28 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file",
-            default_value="servo.urdf.xacro",
+            default_value="epson_scara.urdf.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )
-    declared_arguments.append(
-        DeclareLaunchArgument(
-            "prefix",
-            default_value='""',
-            description="Prefix of the joint names, useful for \
-        multi-robot setup. If changed than also joint names in the controllers' configuration \
-        have to be updated.",
-        )
-    )
+    #declared_arguments.append(
+       # DeclareLaunchArgument(
+        #    "prefix",
+    #         default_value='""',
+    #         description="Prefix of the joint names, useful for \
+    #     multi-robot setup. If changed than also joint names in the controllers' configuration \
+    #     have to be updated.",
+    #     )
+    # )
 
     # Initialize Arguments
     description_package = LaunchConfiguration("description_package")
     description_file = LaunchConfiguration("description_file")
-    prefix = LaunchConfiguration("prefix")
+    # prefix = LaunchConfiguration("prefix")
 
     # Get URDF via xacro
     pkg_path = os.path.join(get_package_share_directory('servo_hardware'))
-    xacro_file = os.path.join(pkg_path,'urdf','servo.urdf.xacro')
+    xacro_file = os.path.join(pkg_path,'urdf','epson_scara.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {"robot_description": robot_description_config.toxml()}
 
