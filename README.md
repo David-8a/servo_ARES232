@@ -95,3 +95,5 @@ y en otro terminal
 ```bash
 socat -d -d pty,rawer,echo=0,link=/tmp/servo  /dev/ttyACM0,b115200,raw
 ```
+
+"Hola mundo"
