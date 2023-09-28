@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="epson">
+  name="servo_ros2">
   <link
     name="world"/>
   <link
@@ -28,7 +28,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/base.STL" />
+          filename="package://servo_ros2/meshes/base.STL" />
       </geometry>
       <material
         name="">
@@ -42,7 +42,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/base.STL" />
+          filename="package://servo_ros2/meshes/base.STL" />
       </geometry>
     </collision>
   </link>
@@ -79,7 +79,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/antebrazo.STL" />
+          filename="package://servo_ros2/meshes/antebrazo.STL" />
       </geometry>
       <material
         name="">
@@ -93,7 +93,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/antebrazo.STL" />
+          filename="package://servo_ros2/meshes/antebrazo.STL" />
       </geometry>
     </collision>
   </link>
@@ -132,7 +132,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/brazo.STL" />
+          filename="package://servo_ros2/meshes/brazo.STL" />
       </geometry>
       <material
         name="">
@@ -146,7 +146,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/brazo.STL" />
+          filename="package://servo_ros2/meshes/brazo.STL" />
       </geometry>
     </collision>
   </link>
@@ -185,7 +185,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/mano.STL" />
+          filename="package://servo_ros2/meshes/mano.STL" />
       </geometry>
       <material
         name="">
@@ -199,7 +199,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/mano.STL" />
+          filename="package://servo_ros2/meshes/mano.STL" />
       </geometry>
     </collision>
   </link>
@@ -243,7 +243,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/dedo.STL" />
+          filename="package://servo_ros2/meshes/dedo.STL" />
       </geometry>
       <material
         name="">
@@ -257,7 +257,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://epson/meshes/dedo.STL" />
+          filename="package://servo_ros2/meshes/dedo.STL" />
       </geometry>
     </collision>
   </link>
