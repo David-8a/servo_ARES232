@@ -37,7 +37,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file",
-            default_value="epson_scara.urdf.xacro",
+            default_value="epson_scara.description.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )
@@ -58,7 +58,7 @@ def generate_launch_description():
 
     # Get URDF via xacro
     pkg_path = os.path.join(get_package_share_directory('servo_hardware'))
-    xacro_file = os.path.join(pkg_path,'urdf','epson_scara.urdf.xacro')
+    xacro_file = os.path.join(pkg_path,'urdf','epson_scara.description.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {"robot_description": robot_description_config.toxml()}
 
