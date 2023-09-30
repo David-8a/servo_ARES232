@@ -78,7 +78,7 @@ def generate_launch_description():
         parameters=[moveit_config.robot_description],
     )
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description','-entity', 'servo'],
+        arguments=['-topic', 'robot_description','-entity', 'servo_ros2'],
         output='screen')
 
     # ros2_control using FakeSystem as hardware
@@ -92,6 +92,12 @@ def generate_launch_description():
         executable="ros2_control_node",
         parameters=[moveit_config.robot_description, ros2_controllers_path],
         output="both",
+    )
+    delayed_ros2_control_node = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=spawn_entity,
+            on_exit=[ros2_control_node],
+        )
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -129,8 +135,6 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
-            delayed_joint_state_broadcaster_spawner,
-            delayed_servo_controller_spawner,
             serial_arg,
             robot_state_publisher,
             gazebo,
@@ -138,6 +142,8 @@ def generate_launch_description():
             rviz_node,
             static_tf,
             run_move_group_node,
-            ros2_control_node,
+            delayed_ros2_control_node,
+            delayed_joint_state_broadcaster_spawner,
+            delayed_servo_controller_spawner
         ]
     )

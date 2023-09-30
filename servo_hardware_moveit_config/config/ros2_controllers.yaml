@@ -14,7 +14,7 @@ servo_controller:
   ros__parameters:
     interface_name: position
     command_interfaces:
-      - velocity
+      - position
     state_interfaces:
       - position
       - velocity

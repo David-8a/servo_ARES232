@@ -9,12 +9,11 @@
     <xacro:servo_ros2_control 
         name="servo" 
         plugin="gazebo_ros2_control/GazeboSystem" 
-        prefix="" 
     />
 
     <!-- Gazebo Colors & Plugins -->
-    </gazebo>
-        <gazebo reference="base_link">
+
+    <gazebo reference="base_link">
         <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="antebrazo">

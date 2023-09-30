@@ -19,22 +19,22 @@
         <param name="pid_o">50</param>
       </hardware>
       <joint name="hombro">
-        <command_interface name="velocity"/>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="codo">
-        <command_interface name="velocity"/>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="muneca">
-        <command_interface name="velocity"/>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
       <joint name="articulacion">
-        <command_interface name="velocity"/>
+        <command_interface name="position"/>
         <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
