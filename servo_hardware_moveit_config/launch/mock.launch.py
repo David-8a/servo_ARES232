@@ -93,6 +93,11 @@ def generate_launch_description():
         ],
     )
 
+    joint_state_publisher_node = Node(
+        package="joint_state_publisher_gui",
+        executable="joint_state_publisher_gui",
+    )
+
     servo_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -127,6 +132,7 @@ def generate_launch_description():
             ros2_control_node,
             mongodb_server_node,
             joint_state_broadcaster_spawner,
+            joint_state_publisher_node,
             servo_controller_spawner,
         ]
     )
