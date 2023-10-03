@@ -58,6 +58,10 @@ install(
   DIRECTORY bringup/launch bringup/config
   DESTINATION share/servo_hardware
 )
+install(
+  DIRECTORY meshes
+  DESTINATION share/servo_hardware
+)
 install(TARGETS servo_hardware
   EXPORT export_servo_hardware
   ARCHIVE DESTINATION lib
