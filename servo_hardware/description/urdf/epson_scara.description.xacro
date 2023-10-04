@@ -24,7 +24,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/base.STL" />
+                <mesh filename="package://servo_hardware/meshes/base.STL" />
             </geometry>
         </collision>
     </link>
@@ -44,7 +44,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/antebrazo.STL" />
+                <mesh filename="package://servo_hardware/meshes/antebrazo.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.901960784313726 0.92156862745098 0.92156862745098 1" />
@@ -53,7 +53,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/antebrazo.STL" />
+                <mesh filename="package://servo_hardware/meshes/antebrazo.STL" />
             </geometry>
         </collision>
     </link>
@@ -74,7 +74,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/brazo.STL" />
+                <mesh filename="package://servo_hardware/meshes/brazo.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.901960784313726 0.92156862745098 0.92156862745098 1" />
@@ -83,7 +83,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/brazo.STL" />
+                <mesh filename="package://servo_hardware/meshes/brazo.STL" />
             </geometry>
         </collision>
     </link>
@@ -104,7 +104,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/mano.STL" />
+                <mesh filename="package://servo_hardware/meshes/mano.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.901960784313726 0.92156862745098 0.92156862745098 1" />
@@ -113,7 +113,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/mano.STL" />
+                <mesh filename="package://servo_hardware/meshes/mano.STL" />
             </geometry>
         </collision>
     </link>
@@ -135,7 +135,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/dedo.STL" />
+                <mesh filename="package://servo_hardware/meshes/dedo.STL" />
             </geometry>
             <material name="">
                 <color rgba="0.780392156862745 0.76078431372549 0.741176470588235 1" />
@@ -144,7 +144,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://servo_harware/meshes/dedo.STL" />
+                <mesh filename="package://servo_hardware/meshes/dedo.STL" />
             </geometry>
         </collision>
     </link>

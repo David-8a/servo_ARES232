@@ -14,9 +14,12 @@ servo_controller:
   ros__parameters:
     interface_name: position
     command_interfaces:
-      - position
+      - velocity
     state_interfaces:
       - position
       - velocity
     joints:
-      - servo_joint
+      - hombro
+      - codo
+      - muneca
+      - articulacion

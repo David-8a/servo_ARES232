@@ -15,4 +15,7 @@ moveit_simple_controller_manager:
     type: FollowJointTrajectory
     default: true
     joints:
-      - servo_joint
+      - hombro
+      - codo
+      - muneca
+      - articulacion
