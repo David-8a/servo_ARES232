@@ -8,7 +8,7 @@
     <xacro:include filename="servo.ros2_control.xacro" />
     <xacro:servo_ros2_control 
         name="servo" 
-        plugin="servo_hardware/ServoArduinoHardware" 
+        plugin="scara_hardware/ScaraHardwareComponent" 
     />
 
 </robot>
