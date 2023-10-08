@@ -72,8 +72,8 @@ def generate_launch_description():
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("servo_hardware_moveit_config"),
-        "config",
+        get_package_share_directory("servo_hardware"),
+        "bringup/config",
         "ros2_controllers.yaml",
     )
     ros2_control_node = Node(

@@ -6,10 +6,10 @@
     <xacro:include filename="$(find servo_hardware)/urdf/epson_scara.description.xacro" />
 
     <!-- Import servo ros2_control description -->
-    <xacro:include filename="servo.ros2_control.xacro" />
-    <xacro:servo_ros2_control 
-        name="servo" 
-        plugin="mock_components/GenericSystem" 
+    <xacro:include filename="$(find scara_hardware)/config/ros2_control.xacro" />
+    <xacro:hardware_component 
+        name="hardware_component" 
+        plugin="scara_hardware/ScaraHardwareComponent" 
     />
     
 </robot>

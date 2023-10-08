@@ -1,37 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="servo_ros2">
-
-    <!-- Import panda urdf file -->
-    <xacro:include filename="$(find servo_hardware)/urdf/epson_scara.description.xacro" />
-
-    <!-- Import servo ros2_control description -->
-    <xacro:include filename="servo.ros2_control.xacro" />
-    <xacro:servo_ros2_control 
-        name="servo" 
-        plugin="gazebo_ros2_control/GazeboSystem" 
-    />
-
-    <!-- Gazebo Colors & Plugins -->
-
-    <gazebo reference="base_link">
-        <material>Gazebo/White</material>
-    </gazebo>
-    <gazebo reference="antebrazo">
-        <material>Gazebo/Blue</material>
-    </gazebo>
-    <gazebo reference="brazo">
-        <material>Gazebo/Red</material>
-    </gazebo>
-        <gazebo reference="mano">
-        <material>Gazebo/Blue</material>
-    </gazebo>
-    <gazebo reference="dedo">
-        <material>Gazebo/White</material>
-    </gazebo>
-    <gazebo>
-        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-            <parameters>$(find servo_hardware_moveit_config)/config/ros2_controllers.yaml</parameters>
-        </plugin>
-    </gazebo>
-
+    
+    <!-- Import scara urdf file -->
+    <xacro:include filename="$(find servo_hardware)/urdf/servo.gazebo.xacro" />
+    
 </robot>

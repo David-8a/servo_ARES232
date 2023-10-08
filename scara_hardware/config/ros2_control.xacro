@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:macro name="servo_ros2_control" params="name plugin">
+  <xacro:macro name="hardware_component" params="name plugin">
     <ros2_control name="${name}" type="system">
       <hardware>
         <plugin>${plugin}</plugin>
-      
+        
         <!-- Joint1 -->
         <param name="joint1_name">hombro</param>
         <param name="joint1_controller_gain">1.0</param>
@@ -35,29 +35,45 @@
 
         <!-- Serial Communication -->
         <param name="loop_rate">30</param>
-        <param name="device">/tmp/scara</param>
+        <param name="device">/home/jammy/servo</param>
         <param name="baud_rate">115200</param>
         <param name="timeout_ms">1000</param>
       </hardware>
       <joint name="hombro">
         <command_interface name="position"/>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity">
+          <param name="initial_value">0.0</param>
+        </state_interface>
       </joint>
       <joint name="codo">
         <command_interface name="position"/>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity">
+          <param name="initial_value">0.0</param>
+        </state_interface>
       </joint>
       <joint name="muneca">
         <command_interface name="position"/>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity">
+          <param name="initial_value">0.0</param>
+        </state_interface>
       </joint>
       <joint name="articulacion">
         <command_interface name="position"/>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity">
+          <param name="initial_value">0.0</param>
+        </state_interface>
       </joint>
     </ros2_control>
   </xacro:macro>

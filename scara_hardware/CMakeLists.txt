@@ -47,6 +47,10 @@ pluginlib_export_plugin_description_file(hardware_interface scara_hardware.xml)
 
 # INSTALL
 install(
+  DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+install(
   DIRECTORY hardware/include/
   DESTINATION include/scara_hardware
 )

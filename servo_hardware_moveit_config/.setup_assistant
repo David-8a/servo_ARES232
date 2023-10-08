@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
     package: "servo_hardware"
-    relative_path: urdf/servo.description.xacro
+    relative_path: description/urdf/epson_scara.description.xacro
     xacro_args: ""
   SRDF:
     relative_path: config/servo.srdf
   CONFIG:
-    author_name: author_name
-    author_email: ares@davinsony.com
-    generated_timestamp: 1694796742
+    author_name: David Ochoa Soto
+    author_email: dochoas@eafit.edu.co
+    generated_timestamp: 1786945656

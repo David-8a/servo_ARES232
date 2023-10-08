@@ -15,11 +15,6 @@ def generate_launch_description():
         get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
     )
 
-    # Command-line arguments
-    serial_arg = DeclareLaunchArgument(
-        "port", default_value="/dev/ttyACM0", description="Puerto comunicacion serial"
-    )
-
     use_sim_time = {"use_sim_time":True}
     moveit_config = (
         MoveItConfigsBuilder("servo_hardware")
@@ -81,25 +76,7 @@ def generate_launch_description():
         arguments=['-topic', 'robot_description','-entity', 'servo_ros2'],
         output='screen')
 
-    # ros2_control using FakeSystem as hardware
-    ros2_controllers_path = os.path.join(
-        get_package_share_directory("servo_hardware_moveit_config"),
-        "config",
-        "ros2_controllers.yaml",
-    )
-    ros2_control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[moveit_config.robot_description, ros2_controllers_path],
-        output="both",
-    )
-    delayed_ros2_control_node = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=spawn_entity,
-            on_exit=[ros2_control_node],
-        )
-    )
-
+ # ros2_control using GazeboSystem as hardware
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -115,7 +92,6 @@ def generate_launch_description():
             on_exit=[joint_state_broadcaster_spawner],
         )
     )
-
 
     servo_controller_spawner = Node(
         package="controller_manager",
@@ -135,14 +111,12 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
-            serial_arg,
             robot_state_publisher,
             gazebo,
             spawn_entity,
             rviz_node,
             static_tf,
             run_move_group_node,
-            delayed_ros2_control_node,
             delayed_joint_state_broadcaster_spawner,
             delayed_servo_controller_spawner
         ]
